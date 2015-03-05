@@ -33,8 +33,9 @@ If the decoded data is a destination address, then add this destination address 
 If the decoded data is a `datachunk`, then append the `datachunk` to the `counterpartydata`.
 
 
-### Step 3: Decode the `counterpartydata`
+## Decode the `counterpartydata`
 
+After finished with the processing of the vouts, you will have the `destinations` and `counterpartydata`.
 
 The first 8 bytes of the `counterpartydata` must be the string CNTRPRTY.
 
