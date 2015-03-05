@@ -1,6 +1,6 @@
 # counterparty-spec
 
-A developer-level specification for the Coutnerparty protocol.
+A developer-level specification for the Counterparty protocol.
 
 
 ## Status
