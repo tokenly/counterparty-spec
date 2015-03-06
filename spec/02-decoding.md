@@ -131,14 +131,14 @@ After finished with the processing of the vouts, you will have the `destinations
 The counterparty data looks like this
 
 ```
-0x434e545250525459|0xFFFFFFFF|xxxxxx...
-          |           |          |
-          |           |          └───── this data is different for each transaction type
-          |           └─────────────────── the transaction type identifier (4 bytes)
-          └────────────────────────────────── the string CNTRPRTY (8 bytes)
+434e545250525459|FFFFFFFF|xxxxxx...
+       |            |       |
+       |            |       └───── this data is different for each transaction type
+       |            └──────────────── the transaction type identifier (4 bytes)
+       └──────────────────────────────── the string CNTRPRTY (8 bytes)
 ```
 
-The first 8 bytes of the `counterpartydata` must be the string CNTRPRTY (Or `0x434e545250525459` in hexadecimal).
+The first 8 bytes of the `counterpartydata` must be the string CNTRPRTY (Or `434e545250525459` in hexadecimal).
 
 The next 4 bytes of the contain a 4 byte integer representing the type of the transaction.  The types of transactions and ID numbers are
 
@@ -154,10 +154,10 @@ ID | Transaction type
 A send transaction contains 2 pieces of data.  An asset name and a quantity.
 
 ```
-0xFFFFFFFF|0xFFFFFFFF
-    |          |
-    |          └───── this data is different for each transaction type
-    └───────────── the transaction type identifier
+000000000004fadf|000000174876e800
+       |               |
+       |               └───── quantity (8 bytes)
+       └────────────────── asset name (8 bytes)
 ```
 
 
