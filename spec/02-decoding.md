@@ -18,9 +18,9 @@ For each vout, do the following:
 
 Look at the last operator in the script stack of the output.  This is found in `scriptPubKey.asm`.  This must be one of:
 
-1. OP_RETURN
-2. OP_CHECKSIG
-3. OP_CHECKMULTISIG
+1. [OP_RETURN](#decoding-op_return)
+2. [OP_CHECKSIG](#decoding-op_checksig)
+3. [OP_CHECKMULTISIG](#decoding-op_checkmultisig)
 
 ### Step 2: Interpret the data for this output
 
