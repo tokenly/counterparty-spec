@@ -37,24 +37,24 @@ If the decoded data is a `datachunk`, then append the `datachunk` to the `counte
 
 After finished with the processing of the vouts, you will have the `destinations` and `counterpartydata`.
 
+The counterparty data looks like this
+
+```
+CNTRPRTY|0xFFFF|xxxxxx...
+    |      |      |
+    |      |      └───── this data is different for each transaction type
+    |      └─────────────── the transaction type identifier
+    └───────────────────────── the string CNTRPRTY
+```
+
 The first 8 bytes of the `counterpartydata` must be the string CNTRPRTY.
 
 The next 4 bytes of the contain a 4 byte integer representing the type of the transaction.  The types of transactions and ID numbers are
 
 ID | Transaction type
 ---|-----------------
-1  | Send
+1  | [Send](decode-send.md)
 20 | Issuance
 .. | (this list is incomplete)
-
-
-#### Parsing a Send Transaction
-
-A send transaction contains 2 pieces of data.  An asset name and a quantity.
-
-The next 8 bytes contain an unsigned integer with the asset id.  The asset id is converted to an asset name.  See [converting asset names].
-
-And the next 8 bytes contain an unsigned integer with the quantity of the send.
-
 
 
