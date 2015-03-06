@@ -114,11 +114,12 @@ and
 4) Verify that combined data chunk, begins with CNTRPRTY
 
 ```
-1c|434e545250525459|00000000000000000004fadf000000174876e800000000000000000000000000000000000000000000000000000000000000000000
-|         |             |
-|         |             └───── All of this is the transaction data (53 bytes)
-|         └─────────────────────── the string CNTRPRTY in hexadecimal (8 bytes)
-└───────────────────────────────────── Ignore the first byte
+1c|434e545250525459|00000000|000000000004fadf000000174876e800000000000000000000000000000000000000000000000000000000000000000000
+|         |             |       |
+|         |             |       └───── All of this is the transaction data (49 bytes)
+|         |             └─────────────── This is the transaction type identifier (4 bytes)
+|         └───────────────────────────────── the string CNTRPRTY in hexadecimal (8 bytes)
+└─────────────────────────────────────────────── Ignore the first byte
 ```
 
 
