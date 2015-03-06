@@ -64,21 +64,24 @@ The combined data chunk beginning with the 9th byte (after CNTRPRTY) is the deco
 
 #### Example decoding OP_CHECKMULTISIG
 
-```
-Hexadecimal representation of the script (ASM):
+Given this hexadecimal representation of the script (ASM):
 
+```
 1 
 0276d539826e5ec10fed9ef597d5bfdac067d287fb7f06799c449971b9ddf9fec6 
 02af7efeb1f7cf0d5077ae7f7a59e2b643c5cd01fb55221bf76221d8c8ead92bf0 
 02f4aef682535628a7e0492b2b5db1aa312348c3095e0258e26b275b25b10290e6 
 3 
 OP_CHECKMULTISIG
+```
 
+We will do the following steps:
 
 1) Make a combined data chunk
 
 Ignore the first and last bytes of each pubkey hash
 
+```
 02|76d539826e5ec10fed9ef597d5bfdac067d287fb7f06799c449971b9ddf9fe|c6 
 xx                                                                xx 
 
@@ -86,26 +89,31 @@ xx                                                                xx
 
 02|af7efeb1f7cf0d5077ae7f7a59e2b643c5cd01fb55221bf76221d8c8ead92b|f0
 xx                                                                xx
+```
  
-
 The combined data chunk is:
 
+```
 76d539826e5ec10fed9ef597d5bfdac067d287fb7f06799c449971b9ddf9fe
 af7efeb1f7cf0d5077ae7f7a59e2b643c5cd01fb55221bf76221d8c8ead92b
+```
 
 
 2) Deobfuscate with ARC4
 
 After deobfuscating, the data chunk is
 
+```
 1c434e54525052545900000000000000000004fadf000000174876e8000000
 00000000000000000000000000000000000000000000000000000000000000
+```
 
 
 3) Strip the first byte from the combined data chunk
 and
 4) Verify that combined data chunk, begins with CNTRPRTY
 
+```
 1c|434e545250525459|00000000000000000004fadf000000174876e800000000000000000000000000000000000000000000000000000000000000000000
 |         |             |
 |         |             └───── All of this is the transaction data (53 bytes)
