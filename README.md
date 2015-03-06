@@ -5,9 +5,9 @@ A developer-level specification for the Counterparty protocol.
 
 ## Status
 
-Very much a work in progress.  This is incomplete and may not be accurate.
+This is a work in progress.  At this point it is incomplete and may contain errors.
 
 
 ## Where to start
 
-Begin with [decoding](spec/decoding.md) for now
+Begin with the [index](spec/01-index.md)
