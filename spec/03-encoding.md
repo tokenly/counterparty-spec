@@ -51,10 +51,10 @@ NOTE: This is not ARC4 Encoded - need to fix this example
  |             |                   |
  |             |                   └── Randomly guessed checksum byte
  |             └───────────────────────── 31 bytes of data
- └────────────────────────────────────────── A 0x02 or 0x03
+ └────────────────────────────────────────── Either 02 or 03
  ```
 
-The 3rd public key in the send transaction is the sender's public key.  This allows the sender to reclaim the BTC dust used in the transaction.
+The last public key in the send transaction is the sender's public key.  This allows the sender to reclaim the BTC dust used in the transaction at a later time.
 
 
 
