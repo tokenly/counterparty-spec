@@ -18,7 +18,7 @@ Build the transaction specific data.  Then encode the using one of the following
 
 The data is encoded as an OP_RETURN script in the transaction.
 
-The OP_RETURN data begins with CNTRPRTY (8 bytes) and the remaining 32 bytes may be used for the operation data.
+The OP_RETURN data begins with CNTRPRTY (8 bytes) and the remaining 32 bytes may be used for the transaction type and data.
 
 
 ```
