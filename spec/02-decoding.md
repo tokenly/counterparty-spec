@@ -41,7 +41,19 @@ Begin by looking at the last operator in the script stack of the output.  This i
 
 ### Decoding OP_RETURN
 
-not written yet
+An OP_RETURN transaction contains the counterparty transaction data entirely encoded in the 40 byte OP_RETURN transaction.
+
+To decode the data, do the following
+
+1. Deobfuscate the OP_RETURN data using the ARC4 cipher.
+2. Verify that the data chunk begins with CNTRPRTY
+
+The data chunk beginning with the 9th byte (after CNTRPRTY) is the decoded data.
+
+#### Example decoding OP_RETURN
+
+`this example is not written yet`
+
 
 ### Decoding OP_CHECKSIG
 
