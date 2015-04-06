@@ -29,6 +29,8 @@ The OP_RETURN data begins with CNTRPRTY (8 bytes) and the remaining 32 bytes may
        └───────────────────────────────── The string CNTRPRTY in hexadecimal (8 bytes)
 ```
 
+EXAMPLE:
+https://chain.so/api/v2/tx/BTC/8a1d4c5308b7b47134b64fec8dfcb501b38d8ac57c2b7e8f1666a0536e36927e
 
 
 
