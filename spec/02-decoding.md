@@ -158,6 +158,7 @@ ID | Transaction type
 ---|-----------------
 0  | [Send](#decoding-sends)
 20 | Issuance
+30 | Broadcast
 .. | (this list is incomplete)
 
 
