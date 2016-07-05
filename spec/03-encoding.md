@@ -73,22 +73,5 @@ The last public key in the send transaction is the sender's public key.  This al
 
 
 
-### Composing the send transaction data
-
-A send transaction contains 2 pieces of data.  An asset name and a quantity.
-
-```
-000000000004fadf|000000174876e800
-       |               |
-       |               └───── quantity (8 bytes)
-       └────────────────── asset name (8 bytes)
-```
-
-
-The first 8 bytes contain an the asset id.  This asset id is a 64 bit representation of the asset name.  See [encoding asset names](encoding-asset-names.md).
-
-And the next 8 bytes contain an unsigned integer with the quantity of the send.
-
-The total send transaction data length is 16 bytes.
 
 
