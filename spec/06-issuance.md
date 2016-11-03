@@ -2,7 +2,7 @@
 
 This describes the operation data for an issuance transaction.  Please see [encoding](03-encoding.md) and [decoding](02-decoding.md) for an explanation of where the operation data fits into the full transaction data.
 
-                 
+```
 00000000d806c1d5|000080321c637440|01|00|00000000|00000000|29|43727970746f2d526577617264732050726f6772616d20687474703a2f2f6c7462636f696e2e636f6d
        |               |           |  |     |        |     |   |
        |               |           |  |     |        |     |   |
@@ -14,7 +14,7 @@ This describes the operation data for an issuance transaction.  Please see [enco
        |               |           └─── divisible (1 byte)
        |               └───── quantity (8 bytes)
        └────────────────── asset name (8 bytes)
-
+```
 
 The example above decodes to:
 
