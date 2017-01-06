@@ -1,5 +1,11 @@
 # Asset Names
 
+## Types of Counterparty Assets
+
+* Textual (also called "Named"): begin with a letter other than `A` and may contain letters A-Z
+* Alphanumeric (also called "Numeric"): begin with `A` followed by a large integer number. 
+
+The both types are case-insensitive. Refer to pthis page](https://counterparty.io/docs/assets/) for additional details.
 
 ### Decoding Asset Names
 
@@ -27,3 +33,5 @@ ABCDEFGHIJKLMNOPQRSTUVWXYZ
 18 / 26     = 0     remainder 18. 18 translates to S. The Asset is SOUP.
 ```
 See [Javascript Example](https://gist.github.com/loon3/a714c7a85abe48d587bd)
+
+Alphanumeric assets (example: `A9999999999999999999`) have an Asset ID that is equal to their name without the leading letter `A` (example for asset from this sentence: `9999999999999999999`).
