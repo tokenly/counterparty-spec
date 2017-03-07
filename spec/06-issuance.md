@@ -6,8 +6,8 @@ This describes the operation data for an issuance transaction.  Please see [enco
 00000000d806c1d5|000080321c637440|01|00|00000000|00000000|29|43727970746f2d526577617264732050726f6772616d20687474703a2f2f6c7462636f696e2e636f6d
        |               |           |  |     |        |     |   |
        |               |           |  |     |        |     |   |
-       |               |           |  |     |        |     |   └─── Description.
-       |               |           |  |     |        |     └─── Length of the description (up to 255 characters)
+       |               |           |  |     |        |     |   └─── Description
+       |               |           |  |     |        |     └─── Length of the description (Note: This length byte is not present for descriptions that are 43 characters long or longer)
        |               |           |  |     |        └─── call price (4 bytes)
        |               |           |  |     └─── call date (4 bytes)
        |               |           |  └─── callable (1 byte)
