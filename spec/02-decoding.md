@@ -2,7 +2,7 @@
 
 ## Preface
 
-These instructions assume transaction data returned from the bitcoin core reference client as of version 0.9
+These instructions assume transaction data returned from the Bitcoin Core reference client as of version 0.9.
 
 
 ## Process vouts
@@ -52,12 +52,12 @@ The data chunk beginning with the 9th byte (after CNTRPRTY) is the decoded data.
 
 #### Example decoding OP_RETURN
 
-`this example is not written yet`
+TODO
 
 
 ### Decoding OP_CHECKSIG
 
-not written yet
+TODO
 
 
 ### Decoding OP_CHECKMULTISIG
@@ -122,7 +122,7 @@ After deobfuscating, the data chunk is
 
 
 3) Strip the first byte from the combined data chunk
-and
+
 4) Verify that combined data chunk, begins with CNTRPRTY
 
 ```
@@ -150,19 +150,28 @@ The counterparty data looks like this
        └──────────────────────────────── the string CNTRPRTY (8 bytes)
 ```
 
-The first 8 bytes of the `counterpartydata` must be the string CNTRPRTY (Or `434e545250525459` in hexadecimal).
+The first 8 bytes of the `counterpartydata` must be the string CNTRPRTY (or `434e545250525459` in hexadecimal).
 
-The next 4 bytes of the contain a 4 byte integer representing the type of the transaction.  The types of transactions and ID numbers are
+The next 4 bytes of the contain a 4 byte integer representing the type of the transaction.  
+
+The types of common transactions and ID numbers are shown below. 
 
 ID | Transaction type
 ---|-----------------
 0  | [Send](#decoding-sends)
 20 | Issuance
 30 | Broadcast
-.. | (this list is incomplete)
+?? | Bet
+?? | Btcpay
+?? | Cancel
+?? | Destroy (not enabled as of v9.55)
+?? | Dividend
+?? | Execute (not enabled on mainnet as of v9.55)
+?? | Issuance
+?? | Order
+?? | Publish (not enabled on mainnet as of v9.55)
 
+Reference: counterparty-lib ([blocks.py](https://github.com/CounterpartyXCP/counterparty-lib/blob/master/counterpartylib/lib/blocks.py#L89))
 
-
-
-
+(Pull requests to complete the list are welcome!)
 
